@@ -37,10 +37,10 @@ class List extends React.Component{
                 <button type="submit">Add Item</button>
                 </form>
                 <div>
-          {this.props.todos.map((todo, index) => (
-            <div key={index} 
+          {this.props.todos.map((todo, id) => (
+            <div key={id} 
             style={{textDecoration: todo.completed ? 'line-through' : 'none'}} 
-              onClick={e => this.handleToggle(e, index)}>
+              onClick={e => this.handleToggle(e, id)}>
               {todo.task}
             </div>
           ))}
